@@ -4,7 +4,7 @@ from model_arch import QRC_UNet
 
 def load_model(model_path):
     model = QRC_UNet()
-    model.load_state_dict(torch.load(best_mobilevit_qrc_unet.pth, map_location='cpu'))
+    model.load_state_dict(torch.load("best_mobilevit_qrc_unet.pth", map_location='cpu'))
     model.eval()
     return model
 
