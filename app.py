@@ -12,7 +12,7 @@ st.title("🧬 Lung Nodule Segmentation (QRC-U-Net)")
 @st.cache_resource
 def load_model():
     model = QRC_UNet()
-    model.load_state_dict(torch.load("qrc_unet_trained.pth", map_location='cpu'))
+    model.load_state_dict(torch.load("best_mobilevit_qrc_unet.pth", map_location='cpu'))
     model.eval()
     return model
 
