@@ -47,7 +47,7 @@ class ADSCBlock(nn.Module):
 class QRC_UNet(nn.Module):
     def __init__(self):
         super(QRC_UNet, self).__init__()
-        self.encoder = timm.create_model('mobilevit_xxs', pretrained=True, features_only=True)
+        self.encoder = timm.create_model('mobilevit_xxs', pretrained=False, features_only=True)
         enc_channels = self.encoder.feature_info.channels()
 
         self.qfc = QuantumFourierConv(enc_channels[-1])
